@@ -1,4 +1,19 @@
 // 프린터 관리자 만들기
+// public class Printer {
+//   public Printer(){}
+//   public void print(Resource r) {...}
+// }
+
+// 프린터는 하나이기 때문에 프린터를 이용하기 위해선 한 번만 호출되게 해야함
+// 해소 법 : 생성자를 외부에서 호출할 수 없게 하는 것. private 로 수정
+// public class Printer {
+//   private Printer(){}
+//   public void print(Resource r) {...}
+// }
+
+// 자신의 프린터에 대한 인스턴스를 하나 만들어 외부에 제공해줄 메서드가 필요
+// static 은 구체적인 인스턴스에 속하는 영역이 아니고 클래스 자체에 속함
+// 클래스의 인스턴스를 통하지 않고서도 메서드를 실행 할 수 있고 변수를 참조할 수 있다.
 public class Printer {
   // 외부에 제공할 자기 자신의 인스턴스
   private static Printer printer = null;
