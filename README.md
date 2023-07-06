@@ -1,30 +1,70 @@
-# Design-Pattern
-Design Pattern exercise
+# Getting Started with Create React App
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Singleton
-- 전역 변수를 사용하지 않고 객체를 하나만 생성, 생성한 객체를 어디서든 참조할 수 있도록 하는 패턴
-- 생성 패턴
-  - 객체 생성에 관련된 패턴
-  - 객체의 생성과 조합을 캡슐화해 특정 객체가 생성되거나 변경 되어도 프로그램 구조에 영향을 크게 받지 않도록 유연성을 제공한다.
+## Available Scripts
 
-## Problem
-Singleton 에서 성능을 향상시키기 위해 Multi Threading 사용 시 애플리케이션에 발생할 수 있는 문제이다.
-- Problems When Using Multiple Threads
-- Race Condition
-  - 메모리와 같은 동일한 자원을 2개 이상의 thread 가 이용하려고 경합하는 현상
+In the project directory, you can run:
 
-## Solution
-1. Eager Initialization ( 정적 변수에 인스턴스를 만들어 바로 초기화하는 방법 )
-  - static 변수 
-    - 객체가 생성되기 전 클래스가 메모리에 로딩될 때 만들어져 초기화가 한 번만 실행된다.
-    - 프로그램 시작 ~ 종료까지 없어지지 않고 메모리에 계속 상주하며 클래스에서 생성된 모든 객체에서 참조할 수 있다.
-2. Thread-Safe Initialization ( 인스턴스를 만드는 메서드에 동기화하는 방법 )
-  - 인스턴스를 만드는 메서드를 임계 구역으로 변경
-    - Multiple Thread 환경에서 동시에 여러 Thread 가 getPrinter 메서드를 소유하는 객체에 접근하는 것을 방지한다.
-  - 공유 변수에 접근하는 부분을 임계 구역으로 변경
-    - 여러 개의 Thread 가 하나 뿐인 counter 변수 값에 동시에 접근해 갱신하는 것을 방지한다.
-  - getInstance() 에 Lock 을 하는 방식이라 속도가 느리다.
-  
+### `npm start`
 
-  
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
