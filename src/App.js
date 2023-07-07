@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { Singleton, Counter } from "./singleton/index.ts";
+import { Singleton, Counter } from "./creational/singleton";
 
 function App() {
   /**
