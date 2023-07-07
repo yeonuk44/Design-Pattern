@@ -1,6 +1,5 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { Singleton, Counter } from "./creational/singleton";
+import { Singleton } from "./creational";
+// import { Singleton } from "./creational/singleton";
 
 function App() {
   /**
@@ -12,7 +11,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>{instance1}</p>
         <p>{instance1 === instance2 ? "true" : "false"}</p>
       </header>
