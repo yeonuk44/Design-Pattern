@@ -1,26 +1,39 @@
-export const Singleton = (function () {
-  let instance; // 싱글톤 인스턴스 변수
+// 인터페이스: 생성될 객체들이 구현해야 하는 메서드를 정의합니다.
+interface Product {
+  operation(): string;
+}
 
-  function createInstance() {
-    // 인스턴스 생성 로직 함수
-    const object = new Object("I am the instance");
-    return object;
+// 구체적인 객체 클래스: 인터페이스를 구현한 구체적인 객체들입니다.
+class ConcreteProductA implements Product {
+  operation(): string {
+    return "ConcreteProductA operation";
   }
+}
 
-  return {
-    // 인스턴스 접근 메서드 getInstance
-    getInstance: function () {
-      if (!instance) {
-        instance = createInstance();
-      }
-      return instance;
-    },
-  };
-})();
+class ConcreteProductB implements Product {
+  operation(): string {
+    return "ConcreteProductB operation";
+  }
+}
 
-// 싱글톤 인스턴스에 접근
-const instance1 = Singleton.getInstance();
-const instance2 = Singleton.getInstance();
+// 팩토리 클래스: 객체를 생성하고 반환하는 역할을 합니다.
+export class Factory {
+  createProduct(type: string): Product {
+    if (type === "A") {
+      return new ConcreteProductA();
+    } else if (type === "B") {
+      return new ConcreteProductB();
+    } else {
+      throw new Error("Invalid product type");
+    }
+  }
+}
 
-// true (동일한 인스턴스), 여러 번 호출해도 동일한 인스턴스를 반환
-console.log(instance1 === instance2);
+// 클라이언트 코드
+const factory = new Factory();
+
+const productA = factory.createProduct("A");
+productA.operation(); // Output: ConcreteProductA operation
+
+const productB = factory.createProduct("B");
+productB.operation(); // Output: ConcreteProductB operation
