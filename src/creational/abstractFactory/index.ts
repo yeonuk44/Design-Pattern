@@ -25,14 +25,14 @@ abstract class Product {
 // WindowsFactory의 제품 클래스
 class WindowsProduct extends Product {
   operation(): string {
-    return "Rendering a Windows button";
+    return "Rendering a Windows Product";
   }
 }
 
 // MacFactory의 제품 클래스
 class MacButton extends Product {
   operation(): string {
-    return "Rendering a Mac button";
+    return "Rendering a Mac Product ";
   }
 }
 

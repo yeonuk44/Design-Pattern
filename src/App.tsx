@@ -28,18 +28,19 @@ function App() {
   function createProduct(factory: AbstractFactory) {
     const product = factory.createProduct();
 
-    product.operation();
+    return product.operation();
   }
 
   const windowsFactory = new WindowsFactory();
-  createProduct(windowsFactory);
+  const windowsFactoryProduct = createProduct(windowsFactory);
 
   const macFactory = new MacFactory();
-  createProduct(macFactory);
+  const macFactoryProduct = createProduct(macFactory);
 
   /**
    * INFO:
    * Design Patterns controller
+   * [Creational Patterns]
    * 1. Singleton
    * 2. Factory
    * 3. Abstract Factory
@@ -59,12 +60,24 @@ function App() {
       designPatternExample = (
         <>
           <p>{productA.operation()}</p>
+          <p>{productA.operation()}</p>
           <p>{productB.operation()}</p>
+          <p>
+            {productA.operation() === productA.operation() ? "true" : "false"}
+          </p>
         </>
       );
       break;
     case "abstractFactory":
-      // abstractFactory에 대한 출력 처리
+      designPatternExample = (
+        <>
+          <p>{windowsFactoryProduct}</p>
+          <p>{macFactoryProduct}</p>
+          <p>
+            {windowsFactoryProduct === macFactoryProduct ? "true" : "false"}
+          </p>
+        </>
+      );
       break;
     default:
       designPatternExample = <p>Plz input text</p>;
