@@ -13,7 +13,7 @@ export class WindowsFactory implements AbstractFactory {
 // MacFactory 클래스
 export class MacFactory implements AbstractFactory {
   createProduct(): Product {
-    return new MacButton();
+    return new MacProduct();
   }
 }
 
@@ -30,7 +30,7 @@ class WindowsProduct extends Product {
 }
 
 // MacFactory의 제품 클래스
-class MacButton extends Product {
+class MacProduct extends Product {
   operation(): string {
     return "Rendering a Mac Product ";
   }

@@ -15,6 +15,7 @@ function App() {
   const factory = new Factory();
   const productA = factory.createProduct("A");
   const productB = factory.createProduct("B");
+  const productC = factory.createProduct("B");
   /**
    * INFO: Abstract Factory
    */
@@ -32,7 +33,8 @@ function App() {
   }
 
   const windowsFactory = new WindowsFactory();
-  const windowsFactoryProduct = createProduct(windowsFactory);
+  const windowsFactoryProduct1 = createProduct(windowsFactory);
+  const windowsFactoryProduct2 = createProduct(windowsFactory);
 
   const macFactory = new MacFactory();
   const macFactoryProduct = createProduct(macFactory);
@@ -60,21 +62,22 @@ function App() {
       designPatternExample = (
         <>
           <p>{productA.operation()}</p>
-          <p>{productA.operation()}</p>
           <p>{productB.operation()}</p>
-          <p>
-            {productA.operation() === productA.operation() ? "true" : "false"}
-          </p>
+          <p>{productC.operation()}</p>
+          <p>{productB === productC ? "true" : "false"}</p>
         </>
       );
       break;
     case "abstractFactory":
       designPatternExample = (
         <>
-          <p>{windowsFactoryProduct}</p>
+          <p>{windowsFactoryProduct1}</p>
+          <p>{windowsFactoryProduct2}</p>
           <p>{macFactoryProduct}</p>
           <p>
-            {windowsFactoryProduct === macFactoryProduct ? "true" : "false"}
+            {windowsFactoryProduct1 === windowsFactoryProduct2
+              ? "true"
+              : "false"}
           </p>
         </>
       );
