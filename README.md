@@ -8,15 +8,20 @@
 
 ## Index
 
-- Create web server
-  - Commit Num: 993f312860111eb3e933575b813c963b8c6ca7ad
-- Add routing setting, using nodeJS
-  - Commit Num: df9b8f8cdcec35154c0b600cc78be2fc297e59b7
+- Creational Pattern
+  - singleton pattern
+    - Commit Num: 805fe4654a8bbaaade4e058eeda122b22c2567e1
+  - factory pattern
+    - Commit Num: aef37b303afcfd2945a6858b6023064f2ead100a
+  - abstract factory pattern
+    - Commit Num: 484162331c3208ac1c5dc10c4787fb48e68376e0
+- Structural Pattern
+- Behavioral Pattern
 
 ## TODO
 
-- [x] Create web server
-- [x] Routing setting
-- [ ] Set Middleware
-- [ ] Maange session
-- [ ] Add RESTful API
+- Creational Pattern
+  - [x] singleton pattern
+  - [x] factory pattern
+  - [x] abstract factory pattern
+  - [ ] builder pattern
