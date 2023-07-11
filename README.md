@@ -1,6 +1,8 @@
 # Repo Title: Design Pattern
 
-express 없이 nodejs 만으로 웹서버 구현이 목적인 프로젝트입니다.
+디자인 패턴에 대해 학습하고, 예제 코드를 통해 이해를 돕기 위한 프로젝트입니다.
+
+## Object
 
 ## Index
 
