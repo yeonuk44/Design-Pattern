@@ -9,11 +9,11 @@
 ## Index
 
 - Creational Pattern
-  - singleton pattern
+  - Singleton Pattern
     - Commit Num: 805fe4654a8bbaaade4e058eeda122b22c2567e1
-  - factory pattern
+  - Factory Pattern
     - Commit Num: aef37b303afcfd2945a6858b6023064f2ead100a
-  - abstract factory pattern
+  - Abstract factory pattern
     - Commit Num: 484162331c3208ac1c5dc10c4787fb48e68376e0
 - Structural Pattern
 - Behavioral Pattern
@@ -21,7 +21,13 @@
 ## TODO
 
 - Creational Pattern
-  - [x] singleton pattern
-  - [x] factory pattern
-  - [x] abstract factory pattern
-  - [ ] builder pattern
+  - [x] Singleton Pattern
+  - [x] Factory Pattern
+  - [x] Abstract factory Pattern
+  - [ ] Builder Pattern
+  - [ ] Prototype Pattern
+- Structural Pattern
+  - [ ] Adapter
+  - [ ] Composite
+  - [ ] Decorator
+- Behavioral Pattern
